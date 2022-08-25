@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IJWS Login</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="icon" type="image/x-icon" href="/img/ijwslogo.png">
+  <script src="https://kit.fontawesome.com/013d4f17f3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+
+<body onload="showErrorMessage()">
+  <div class="container">
+    <!-----------------Hearts Background------------------->
+    <div class="content-heart">
+      <svg class="heart" viewBox="0 0 32 29.6">
+        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+      </svg>
+
+      <svg class="heart" viewBox="0 0 32 29.6">
+        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+      </svg>
+
+      <svg class="heart" viewBox="0 0 32 29.6">
+        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+      </svg>
+
+      <svg class="heart" viewBox="0 0 32 29.6">
+        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+      </svg>
+
+      <svg class="heart" viewBox="0 0 32 29.6">
+        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+      </svg>
+
+      <svg class="heart" viewBox="0 0 32 29.6">
+        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+      </svg>
+    </div>
+    <!--------------------------Hearts Background End-------------------------->
+
+    <div class="signin-signup">
+      <!---------------------Sign in------------------------>
+      <form action="/login-local" class="sign-in-form" method="post">
+        <h2 class="title">Sign in</h2>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Username" id="si-username" name="username" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" id="si-password" name="password" />
+          <i class="fa-solid fa-eye-slash eyecon" id="si-eyeCon" onclick="showPassword(event)"></i>
+        </div>
+        <div class="form-link">
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        <input type="submit" value="Login" class="btn" onclick="return submitForm()" />
+        <p class="social-text">Or Sign in with social</p>
+        <div class="social-media">
+          <a href="/login-facebook" class="social-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="/login-google" class="social-icon">
+            <i class="fab fa-google"></i>
+          </a>
+        </div>
+        <p class="account-text">
+          Don't have an account yet? <a href="#" onclick="switchToSignup()">Sign up</a>
+        </p>
+      </form>
+      <!---------------------Sign in End------------------------>
+
+      <!---------------------Sign up------------------------>
+      <form action="/signup-local" class="sign-up-form" method="post">
+        <h2 class="title">Sign up</h2>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="First Name" id="su-firstname" name="firstname" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Last Name" id="su-lastname" name="lastname" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Username" id="su-username" name="username" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email" id="su-email" name="email" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" id="su-password" name="password" />
+          <i class="fa-solid fa-eye-slash eyecon" id="si-eyeCon" onclick="showPassword(event)"></i>
+        </div>
+        <input type="submit" value="Sign up" class="btn" onclick="submitForm2(event); return false;" />
+        <p class="social-text">Or Sign in with social</p>
+        <div class="social-media">
+          <a href="/login-facebook" class="social-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="/login-google" class="social-icon">
+            <i class="fab fa-google"></i>
+          </a>
+        </div>
+        <p class="account-text">
+          Already have an account? <a href="#" onclick="switchToSignin()">Sign in</a>
+        </p>
+      </form>
+    </div>
+    <!---------------------Sign up End------------------------>
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <img src="img/chat.gif" alt="chat" class="image">
+        <div class="content">
+          <h3 style="margin-top: -10px;">Already have an Account?</h3>
+          <button class="btn" style="margin-top: -20px;" onclick="switchToSignin()">Sign in</button>
+        </div>
+      </div>
+      <div class="panel right-panel">
+        <img src="img/chat.gif" alt="chat" class="image">
+        <div class="content">
+          <h3 style="margin-top: -10px;">Don't have an account yet?</h3>
+          <button class="btn" style="margin-top: -20px;" onclick="switchToSignup()">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./js/login.js"></script>
+</body>
+
+</html>

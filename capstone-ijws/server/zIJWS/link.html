@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IJWS: Send Something</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" type="image/x-icon" href="/img/ijwslogo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/link.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body onload="load(); updateMessageLayout();">
+    <div class="w3-display-container" id="dashboard-nav"
+        style="height: 100vh; width: 100vw; position: fixed; left: 0; top: 0;">
+        <div class="w3-display-topleft">
+            <img src="../img/ijwslogonobg.png" style="height: 60pt; margin: 18pt;">
+        </div>
+        <div class="w3-display-topright">
+            <p><a href="/login" style="font-size: 16pt; color: white; font-weight: bold; margin: 16pt;" class="w3-button w3-pink w3-round-large w3-hover-red">Create Account</a></p>
+        </div>
+        <div class="w3-display-topmiddle">
+            <p style="font-size: 28pt; color: white; font-weight: bold; margin-top: 30px;" id="page-title">I Just Wanna Say</p>
+        </div>
+    </div>
+    <div class="w3-content" style="width: 100%;">
+        <div class="w3-row" id="link-container">
+            <div class="w3-col l3 m2 w3-hide-small">&nbsp;</div>
+            <div class="w3-col l6 m8 s12">
+                <div>
+                    <form action="\send-message" method="post" onsubmit="return validateMessage()" id="message-form"
+                        style="width: 100%;">
+                        <input type="text" name="codename" id="codename" placeholder="Codename (Optional)"
+                            class="w3-round-large w3-input w3-border-0" style="width: 100%;">
+                        <input type="text" name="linkId" id="link-id" class="w3-hide">
+                        <input type="text" name="message" id="message-field" class="w3-hide">
+                        <p contenteditable="true" type="text" name="message-proxy" id="message-area" title="Message"
+                            placeholder="Say Something!" class="w3-round-large w3-border-white"
+                            onfocusout="updateMessageLayout()"></p>
+                        <div id="color-container" class="w3-container">
+                            <div class="w3-content">
+                                <label for="start-color">Color 1:</label>
+                                <input type="color" id="start-color" name="startColor" value="#65b5e6"
+                                    onchange="updateMessageLayout()">
+                                <label for="end-color">Color 2:</label>
+                                <input type="color" id="end-color" name="endColor" value="#f7f13b"
+                                    onchange="updateMessageLayout()">
+                                <label for="font-color">Font Color:</label>
+                                <input type="color" id="font-color" name="fontColor" value="#ffffff"
+                                    onchange="updateMessageLayout()">
+                            </div>
+                        </div>
+                        <label for="font-style">Font Style:</label>
+                        <select id="font-style" name="fontStyle" class="w3-round-large w3-select w3-border-0"
+                            onchange="updateMessageLayout()">
+                            <option value="Aboreto">Aboreto</option>
+                            <option value="Bebas Neue">Bebas Neue</option>
+                            <option value="Bungee Shade">Bungee Shade</option>
+                            <option value="Dancing Script">Dancing Script</option>
+                            <option value="DynaPuff">DynaPuff</option>
+                            <option value="Fjalla One">Fjalla One</option>
+                            <option value="Gamja Flower">Gamja Flower</option>
+                            <option value="Henny Penny">Henny Penny</option>
+                            <option value="Nanum Pen Script">Nanum Pen Script</option>
+                            <option value="Poppins" selected>Poppins</option>
+                            <option value="Silkscreen">Silkscreen</option>
+                            <option value="Special Elit">Special Elit</option>
+                        </select>
+                        <div class="w3-display-container" style="height: 50px;">
+                            <input type="submit" class="w3-button w3-orange w3-round-large w3-center w3-display-middle">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="w3-col l3 m2 w3-hide-small">&nbsp;</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto');
+* {
+  padding: 0;
+}
+body {
+  background: linear-gradient(to right, #df433a, #f1eda9);
+}
+.container {
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.1));
+  width: 540px;
+  height: 420px;
+  position: relative;
+  margin: auto auto;
+  margin-top: 5%;
+  border-radius: 5px;
+  box-shadow: 2px 4px 6px rgba(55, 52, 73, 0.4), inset -2px -2px 4px white;
+}
+.leftbox {
+  background: #e17254;
+  float: left;
+  position: absolute;
+  width: 15%;
+  height: 105%;
+  border: 1px solid #ebc38e;
+  border-radius: 3px;
+  box-shadow: 2px 4px 6px rgba(55, 52, 73, 0.4), inset -2px -2px 4px #eac790;
+  top: -2.45%;
+  left: 5%;
+}
+.leftbox nav .active {
+  color: #ac332c;
+}
+.leftbox nav a {
+  color: #f2f2f2;
+  font-size: 1.45em;
+  display: block;
+  padding: 30px;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+}
+.leftbox nav a:hover {
+  color:  #ac332c;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.rightbox {
+  float: right;
+  padding: 10px 20px;
+  width: 70%;
+}
+.rightbox .noshow {
+  display: none;
+}
+.rightbox .profile, .rightbox .payment, .rightbox .subscription, .rightbox .privacy, .rightbox .settings {
+  transition: opacity 0.5s ease-in;
+  position: absolute;
+  width: 70%;
+}
+.rightbox .profile h1, .rightbox .payment h1, .rightbox .subscription h1, .rightbox .privacy h1, .rightbox .settings h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ac332c;
+  font-size: 1.2em;
+  margin-top: 40px;
+  margin-bottom: 35px;
+}
+.rightbox .profile h2, .rightbox .payment h2, .rightbox .subscription h2, .rightbox .privacy h2, .rightbox .settings h2 {
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  color: #515151;
+  font-size: 0.6em;
+  letter-spacing: 1px;
+  width: 80%;
+}
+.rightbox .profile p, .rightbox .payment p, .rightbox .subscription p, .rightbox .privacy p, .rightbox .settings p {
+  width: 90%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65em;
+  letter-spacing: 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #3fb6a8, rgba(164, 224, 170, 0.9)) 1 0%;
+  border-top: none;
+  padding: 7px 0;
+  color: white;
+}
+.rightbox .profile p input, .rightbox .payment p input, .rightbox .subscription p input, .rightbox .privacy p input, .rightbox .settings p input {
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.12em;
+  background: none;
+  color: #FFFFFF;
+}
+.rightbox .profile p input:focus, .rightbox .payment p input:focus, .rightbox .subscription p input:focus, .rightbox .privacy p input:focus, .rightbox .settings p input:focus {
+  outline: none;
+}
+.rightbox .profile p ::placeholder, .rightbox .payment p ::placeholder, .rightbox .subscription p ::placeholder, .rightbox .privacy p ::placeholder, .rightbox .settings p ::placeholder {
+  color: #FFFFFF;
+}
+.rightbox .profile button, .rightbox .payment button, .rightbox .subscription button, .rightbox .privacy button, .rightbox .settings button {
+  float: right;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 1px;
+  border: none;
+  color: #256a62;
+  background: none;
+}
+.rightbox .profile button:hover, .rightbox .payment button:hover, .rightbox .subscription button:hover, .rightbox .privacy button:hover, .rightbox .settings button:hover {
+  font-weight: 900;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  text-align: right;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+}
+footer p {
+  border: none;
+  padding: 0;
+}
+footer p strong {
+  font-size: 2em;
+  text-decoration: none;
+}
+footer p strong:hover {
+  color: #cd6b74;
+  transition: all 0.4s ease-in-out;
+  font-weight: 1500;
+  font-size: 4em;
+}
+footer .julie {
+  font-size: 0.5em;
+}
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+footer a:hover {
+  color: #D37E86;
+  font-weight: 900;
+  font-size: 1.5em;
+}

@@ -1,0 +1,77 @@
+/* Hearts Background Style */
+.content-heart {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #f2eda0;
+}
+
+svg {
+  position: absolute;
+  bottom: -150px;
+  animation: animate 20s infinite linear;
+}
+
+svg:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  fill: #ff6699;
+  left: 86%;
+  animation-delay: 0s;
+}
+
+svg:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  fill: #ff6699;
+  left: 12%;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+
+svg:nth-child(3) {
+  width: 110px;
+  height: 110px;
+  fill: #ff6699;
+  left: 70%;
+  animation-delay: 5.5s;
+}
+
+svg:nth-child(4) {
+  width: 120px;
+  height: 120px;
+  fill: #ff6699;
+  left: 75%;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+svg:nth-child(5) {
+  width: 120px;
+  height: 120px;
+  fill: #ff6699;
+  left: 65%;
+  animation-delay: 0s;
+}
+
+svg:nth-child(6) {
+  width: 100px;
+  height: 100px;
+  fill: #ff6699;
+  left: 15%;
+  animation-delay: 3.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* Hearts Background Style End */

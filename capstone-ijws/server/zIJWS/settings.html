@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IJWS Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="/img/ijwslogo.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../css/global.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/settings.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css" />
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css" />
+    <script src="https://kit.fontawesome.com/013d4f17f3.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="loadProfile()">
+    <div class="w3-display-container" id="dashboard-nav" style="height: 100vh; width: 100vw; position: fixed; left: 0; top: 0;">
+        <div class="w3-display-topleft">
+            <img src="../img/ijwslogonobg.png" style="height: 60pt; margin: 18pt;">
+        </div>
+        <div class="w3-display-topmiddle">
+            <p style="font-size: 28pt; color: white; font-weight: bold; margin-top: 30px;">Profile</p>
+        </div>
+        <div class="w3-display-topright">
+            <a href="/settings"><i class="fa-solid fa-gear" style="font-size: 32pt; color: white; margin: 18pt;"></i></a>
+            <a href="/about"><i class="fa-brands fa-dev" style="font-size: 32pt; color: white; margin: 18pt;"></i></a>
+        </div>
+        <div class="w3-display-bottomright">
+            <a href="/logout"><i class="fa-solid fa-right-from-bracket send" style="font-size: 32pt; color: white; margin: 18pt;"></i></a>
+        </div>
+    </div>
+    <div class="w3-card w3-round-xlarge w3-deep-orange" id="settings-div" style="height: 100%;">
+        <form id="settings" class="w3-container" style="width: 100%;">
+          <label for="first-name">First Name</label>
+          <input id="first-name" class="w3-input w3-round-large" type="text">
+          <label for="last-name">Last Name</label>
+          <input id="last-name" class="w3-input w3-round-large" type="text">
+          <button class="w3-button w3-round-large w3-pink w3-hover-deep-purple">Update Name</button>
+          <label for="current-password">Current Password</label>
+          <input id="current-password" class="w3-input w3-round-large" type="password">
+          <label for="new-password">New Password</label>
+          <input id="new-password" class="w3-input w3-round-large" type="password">
+          <button class="w3-button w3-round-large w3-pink w3-hover-deep-purple">Update Password</button>
+          <label for="username">Username</label>
+          <input id="username" class="w3-input w3-round-large" type="text">
+          <button class="w3-button w3-round-large w3-pink w3-hover-deep-purple">Update Username</button>
+        </form>
+    </div>
+</body>
+
+</html>
